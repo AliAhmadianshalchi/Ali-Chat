@@ -49,6 +49,8 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async {
                                 self.messagingTableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.messagingTableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
@@ -65,7 +67,11 @@ class ChatViewController: UIViewController {
                 if let error = error {
                     print("there was a problem saving data into fireStore , \(error).")
                 } else {
+                    
                     print("the data saved in fireStore successfully.")
+                    DispatchQueue.main.async {
+                        self.messageTextField.text = ""
+                    }
                 }
             }
             
@@ -98,8 +104,23 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let message = messages[indexPath.row]
         let cell = messagingTableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label.text = messages[indexPath.row].body
+        cell.label.text = message.body
+        
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.AliVeryDarkGreen)
+            cell.label.textColor = UIColor(named: K.BrandColors.AliTiltBlue)
+        } else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.AliTiltBlue)
+            cell.label.textColor = UIColor(named: K.BrandColors.AliVeryDarkGreen)
+        }
+        
         return cell
     }
     

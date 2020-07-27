@@ -67,7 +67,7 @@
                 <outlet property="label" destination="hZH-oq-yuF" id="tFs-PH-V9W"/>
                 <outlet property="leftImageView" destination="vXZ-6m-d3e" id="hfP-hw-eRu"/>
                 <outlet property="messageBubble" destination="goq-wm-sF2" id="bab-i0-Dri"/>
-                <outlet property="rightImageView" destination="vXZ-6m-d3e" id="6QK-d7-S0j"/>
+                <outlet property="rightImageView" destination="Jph-gE-xAO" id="2X1-fj-z6s"/>
             </connections>
             <point key="canvasLocation" x="124.6376811594203" y="130.91517857142856"/>
         </tableViewCell>
