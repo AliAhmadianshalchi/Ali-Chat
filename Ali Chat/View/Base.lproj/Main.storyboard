@@ -318,7 +318,7 @@
                                 <rect key="frame" x="0.0" y="714" width="414" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ich-ne-9Mf">
-                                        <rect key="frame" x="20" y="20" width="314" height="40"/>
+                                        <rect key="frame" x="20" y="10" width="314" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="4Xs-go-csK"/>
                                         </constraints>
@@ -343,11 +343,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.20542559029999999" green="0.80475258829999996" blue="0.74510103459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="Ich-ne-9Mf" firstAttribute="top" secondItem="oJt-9X-XQk" secondAttribute="top" constant="20" id="Cus-Ph-ndJ"/>
+                                    <constraint firstItem="Ich-ne-9Mf" firstAttribute="top" secondItem="oJt-9X-XQk" secondAttribute="top" constant="10" id="Cus-Ph-ndJ"/>
                                     <constraint firstItem="JFY-jc-NLa" firstAttribute="top" secondItem="oJt-9X-XQk" secondAttribute="top" constant="20" id="DQP-oQ-Fds"/>
                                     <constraint firstItem="JFY-jc-NLa" firstAttribute="leading" secondItem="Ich-ne-9Mf" secondAttribute="trailing" constant="20" id="EQP-5V-INd"/>
                                     <constraint firstAttribute="height" constant="60" id="ZAf-uf-tw9"/>
                                     <constraint firstAttribute="trailing" secondItem="JFY-jc-NLa" secondAttribute="trailing" constant="20" id="f4w-4n-hyi"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ich-ne-9Mf" secondAttribute="bottom" constant="10" id="uJr-sS-C0I"/>
                                     <constraint firstItem="Ich-ne-9Mf" firstAttribute="leading" secondItem="oJt-9X-XQk" secondAttribute="leading" constant="20" id="voC-eI-msq"/>
                                 </constraints>
                             </view>
